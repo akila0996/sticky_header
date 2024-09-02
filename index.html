@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticky Header</title>
+    <title>Sticky Header & Side Menubar</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,6 +12,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
+<div  id="side-menu" class="side-menu">
+    <button id="closenav" onclick="closeNav()">close</button>
+<ul>
+    <li>home</li>
+    <li>our products</li>
+    <li>careers</li>
+    <li>about us</li>
+    <li>portfolio</li>
+</ul>
+</div>
+
+
+
 
     <!-----------HEADER SECTION--------------->
     <header>
@@ -21,12 +34,7 @@
             <a href="#careers">Careers</a>
             <a href="#about us">About us</a>
             <a href="resume.html">portfolio</a>
-
-            <div class="search-container">
-                  <input type="text" placeholder="Search.." name="search">
-                  <button type="submit"><i class="fa fa-search"></i></button>
-              </div>
-
+            <button onclick="openNav()" class="open-nav" >Side Menu</button>
           </div>
           
     </header>
@@ -41,14 +49,15 @@
             <button>Get Started</button>
             
         </div>
+        
         <div class="banner-wrapper">
             <img src="image.jpg" alt="banner">
         </div> 
-
+    
           <div class="banner1"> 
             <img src="banner.png" alt="banner">
           </div>
-
+        
           <div class="banner2"> 
             <img src="banner2.png" alt="banner">
           </div>
@@ -58,5 +67,14 @@
             <p>Created by-Learnzdevelopmenthub</p>
         </footer>
 
+
+        <script>
+            function openNav(){
+                document.getElementById("side-menu").style.display="block";
+            }
+            function closeNav(){
+                document.getElementById("side-menu").style.display="none";
+            }
+        </script>
 </body>
 </html>
